@@ -34,7 +34,7 @@ COPY --from=publish-release /out/release .
 
 
 #######################################
-### Debbuging image                 ###
+### Debug image                     ###
 #######################################
 FROM build AS publish-debug
 COPY SkaffoldDemo/ SkaffoldDemo/
