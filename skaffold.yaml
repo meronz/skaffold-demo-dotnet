@@ -1,0 +1,16 @@
+apiVersion: skaffold/v2beta27
+kind: Config
+metadata:
+  name: skaffold-demo
+build:
+  local:
+    useBuildkit: true
+  artifacts:
+  - image: skaffold-demo
+    docker:
+      dockerfile: Dockerfile
+      target: debug
+deploy:
+  kubectl:
+    manifests:
+    - deploy/skaffold-demo.yaml
